@@ -1,12 +1,5 @@
-bin/
-include/
-lib/
-lib64
 pyvenv.cfg
-share
-modules/__pycache__/*.pyc
 .pytest_cache
 __pycache__
 ()
-quiztest.py
 .vscode
