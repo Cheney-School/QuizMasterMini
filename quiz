@@ -32,6 +32,8 @@ def Home_layout():
         [sg.Text('Welcome to QuizMasterMini', font=("Calibri", 24))],
         [sg.Text('_'*70)],
         [sg.Button('Make a Quiz', size = (30,2)), sg.Button('Play a Quiz', size = (30,2))],
+        [sg.Text('_'*65)],
+        [sg.Button("Quit")],
     ]
 
 def quiz_layout():
@@ -48,7 +50,7 @@ def main():
 
     while True:
         event, values = home_window.read()
-        if event == sg.WIN_CLOSED:
+        if event == sg.WIN_CLOSED or event == "Quit":
             break
         if event == 'Make a Quiz':
             subprocess.Popen(["python3", "quizcreator"])
@@ -87,7 +89,7 @@ def main():
                             if values['answers'][0] == correct_answer:
                                 score += 1
                         else:
-                            sg.popup('Please select an answer')
+                            sg.popup('Please select an answer', keep_on_top=True)
                             continue
 
                         question_index += 1
@@ -104,4 +106,5 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 
