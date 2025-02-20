@@ -1,12 +1,12 @@
-# QuizMasterMini
+# QuizMasterLite
 
 This code is a smaller version of [QuizMaster](https://github.com/hermonochy/QuizMaster) for devices with less storage. No external requirements are needed.
 
 ## How to Use
 
 ### Install
-1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterMini.git`
-2. Enter the directory containing the game executable: `cd QuizMasterMini`
+1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterLite.git`
+2. Enter the directory containing the game executable: `cd QuizMasterLite`
 3. Run either Quiz Creator or Quiz Game (see below).
 
 ### Running QuizMasterMini

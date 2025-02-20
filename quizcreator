@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
-import modules.PySimpleGUI as sg
+import PySimpleGUI as sg
 import json
-from modules.persistence import QuizQuestion
+from dataclasses import dataclass, field
+from typing import List, Tuple
 
+@dataclass
+class QuizQuestion:
+    question: str
+    correctAnswer: str
+    wrongAnswers: List[str]
+    timeout: int = field(default=10)
+
+    def __repr__(self):
+        return self.question
 
 questionList = []
 
@@ -82,7 +92,7 @@ while True:
            questionEditorWindow.close()
         
    if event == 'Save':         
-      filename = sg.popup_get_file('', save_as=True, no_window=True, \
+      filename = sg.popup_get_file('Save', save_as=True, no_window=True, initial_folder="quizzes", \
             file_types=(("All JSON Files", "*.json"), ("All Files", "*.*")))
       with open(f'{filename}', 'w') as file:
          savedData = {"title": values['quiz_name'] , "listOfQuestions": questionList, "time given": editorValues['time_given']}
@@ -92,8 +102,9 @@ while True:
          
    if event == 'Open':
      try:
-        filename = sg.popup_get_file("Open quiz", no_window=True)
-        with open(filename, 'r') as file:
+      filename = sg.popup_get_file('Open', no_window=True, initial_folder="quizzes", \
+            file_types=(("All JSON Files", "*.json"), ("All Files", "*.*")))
+      with open(filename, 'r') as file:
            quizDicts = json.load(file)
            questionList = []
            for q in quizDicts["listOfQuestions"]:
