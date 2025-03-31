@@ -55,7 +55,7 @@ def main():
         if event == 'Make a Quiz':
             subprocess.Popen(["python3", "quizcreator"])
         if event == 'Play a Quiz':    
-            filename = sg.popup_get_file("Please select a quiz:", initial_folder="quizzes",
+            filename = sg.popup_get_file("Please select a quiz:", initial_folder="Quizzes",
                                           no_window=True, file_types=(('Quiz files', '.json'),))
             if not filename:
                 continue

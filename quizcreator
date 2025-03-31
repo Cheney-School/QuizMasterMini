@@ -92,7 +92,7 @@ while True:
            questionEditorWindow.close()
         
    if event == 'Save':         
-      filename = sg.popup_get_file('Save', save_as=True, no_window=True, initial_folder="quizzes", \
+      filename = sg.popup_get_file('Save', save_as=True, no_window=True, initial_folder="Quizzes", \
             file_types=(("All JSON Files", "*.json"), ("All Files", "*.*")))
       with open(f'{filename}', 'w') as file:
          savedData = {"title": values['quiz_name'] , "listOfQuestions": questionList, "time given": editorValues['time_given']}
@@ -102,7 +102,7 @@ while True:
          
    if event == 'Open':
      try:
-      filename = sg.popup_get_file('Open', no_window=True, initial_folder="quizzes", \
+      filename = sg.popup_get_file('Open', no_window=True, initial_folder="Quizzes", \
             file_types=(("All JSON Files", "*.json"), ("All Files", "*.*")))
       with open(filename, 'r') as file:
            quizDicts = json.load(file)

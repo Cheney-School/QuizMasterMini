@@ -5,7 +5,7 @@ This code is a smaller version of [QuizMaster](https://github.com/hermonochy/Qui
 ## How to Use
 
 ### Install
-1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterLite.git`
+1. Clone this repository `git clone https://github.com/hermonochy/QuizMasterLite.git` or `git clone --recurse-submodules https://github.com/hermonochy/QuizMasterLite.git` if you would like to include example quizzes.
 2. Enter the directory containing the game executable: `cd QuizMasterLite`
 3. Run either Quiz Creator or Quiz Game (see below).
 
