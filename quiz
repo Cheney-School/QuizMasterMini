@@ -29,7 +29,7 @@ def load_quiz(filename: str) -> Tuple[List[QuizQuestion], str]:
 
 def Home_layout():
     return [
-        [sg.Text('Welcome to QuizMasterLite', font=("Calibri", 24))],
+        [sg.Text('Welcome to QuizMasterMini', font=("Calibri", 24))],
         [sg.Text('_'*70)],
         [sg.Button('Make a Quiz', size = (30,2)), sg.Button('Play a Quiz', size = (30,2))],
         [sg.Text('_'*65)],
